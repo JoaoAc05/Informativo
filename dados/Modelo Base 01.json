@@ -1,0 +1,60 @@
+{
+  "data": "2026-10",
+  "capa": {
+    "titulo": "Informativo de modificações",
+    "descricao": "Melhorias e novas funcionalidades para um sistema cada vez mais completo, seguro e eficiente para o seu dia a dia.",
+    "destaques": [
+      {"icone": "capa/capa_config", "texto": "Mais eficiência nos processos"},
+      {"icone": "capa/capa_grafico", "texto": "Mais controle para o seu negócio"},
+      {"icone": "capa/capa_pessoas", "texto": "Sempre em evolução com você"}
+    ]
+  },
+  "principaisNovidades": [
+    {"icone": "icon_phone", "novidade": "Novo painel para o acompanhamento de relatórios pelo seu celular.", "sistemaPlataforma": "Painel RuralFinance"},
+    {"icone": "icon_phone", "novidade": "Novo painel para o acompanhamento de relatórios pelo seu celular.", "sistemaPlataforma": "Painel SiloVirtual"},
+    {"icone": "icon_doc", "novidade": "O sistema transporte está com novas integradoras para emissão de CIOT e Vale Pedágio!", "sistemaPlataforma": "RuralTransportes"}
+  ],
+  "sistemas": {
+    "RuralFinance": {
+      "titulo": "RuralFinance",
+      "subtitulo": "Mais controle e agilidade na gestão financeira.",
+      "icone": "icones/icon_coin",
+      "cor": "verde",
+      "solicitacoes": [
+        {"icone":"icon_qrcode","tela":"Recebimentos (Pix)","novidade":"Mensagem de erro no QR Code","descricao":"Ao tentar gerar o QR Code do Pix, quando ocorrer erro na recepção do banco, o sistema agora exibe uma mensagem orientando a tentar novamente."},
+        {"icone":"icon_printer","tela":"Relatório de Notas Fiscais","novidade":"Notas sem peso de retorno","descricao":"No relatório de nota fiscal do agrupamento contrato/retorno, agora são exibidas também as notas fiscais que não possuem lançamento de peso de retorno."},
+        {"icone":"icon_card","tela":"Conta Corrente","novidade":"Bloqueio para anos anteriores a 2000","descricao":"Ao lançar em conta corrente com ano retroativo inferior a 2000, o sistema bloqueia o lançamento, evitando registros inválidos."},
+        {"icone":"icon_printer","tela":"Relatório de Manutenção","novidade":"Novo modelo de relatório","descricao":"Novo modelo com relação de valores de manutenção/produtos, contas a pagar relacionadas e receitas de frete. Inclui agrupamento/filtro por produto das notas, com filtro por vários subgrupos."},
+        {"icone":"icon_tool","tela":"Tarefas do Sistema","novidade":"Vencimento de periodicidades","descricao":"Agora é possível definir e visualizar o vencimento das periodicidades nas tarefas do sistema."},
+        {"icone":"icon_doc","tela":"CTe","novidade":"Impressão da recusa","descricao":"Implementada a impressão da recusa de CTe (mesmo modelo da inutilização de nota)."},
+        {"icone":"icon_handshake","tela":"Contratos","novidade":"Quantidade em TON","descricao":"Ajustados os campos de quantidade do contrato e dos grids inferiores para que o sistema trabalhe com TON (toneladas)."},
+        {"icone":"icon_printer","tela":"Relatório Bloco H","novidade":"Novas opções de impressão e ordenação","descricao":"No relatório detalhado do bloco H, agora é possível imprimir, ordenar por coluna e incluir a coluna com o número do contrato."},
+        {"icone":"icon_printer","tela":"Estoque (Bloco H)","novidade":"Condição para venda futura","descricao":"Criada uma nova condição de estoque do bloco H para notas de venda futura."},
+        {"icone":"icon_doc","tela":"Notas Recusadas","novidade":"Destaque visual","descricao":"Notas já recusadas que estão pendentes de lançar a próxima etapa agora são exibidas com cor diferente nos grids de contratos e de recusa."}
+      ]
+    },
+    "RuralTransportes": {
+      "titulo": "RuralTransportes",
+      "subtitulo": "Mais integração e informações para sua operação.",
+      "icone": "icones/icon_caminhao",
+      "cor": "azul",
+      "solicitacoes": [
+        {"icone":"icon_doc","tela":"MDF-e","novidade":"Informação do CIOT","descricao":"Ao emitir o CIOT pelo CTE, a informação agora é exibida na impressão do MDF-e."}
+      ]
+    },
+    "SiloVirtual": {
+      "titulo": "SiloVirtual",
+      "subtitulo": "Melhorias na gestão de armazenagem e cadastros.",
+      "icone": "icones/SiloVirtual",
+      "cor": "azul",
+      "solicitacoes": [
+        {"icone":"icon_people","tela":"Cadastro de Entidade (Produtor Rural)","novidade":"Busca Sintegra","descricao":"Inclusão da UF do PA na busca do Sintegra de cadastro de entidade produtor rural."},
+        {"icone":"icon_tool","tela":"Classificação","novidade":"Remoção de campo","descricao":"O campo de “ardidos” foi removido da classificação."}
+      ]
+    }
+  },
+  "rodape": {
+    "titulo": "Juntos cultivamos o futuro!",
+    "descricao": "Essas melhorias são resultado de sugestões, necessidades do dia a dia e do nosso compromisso em oferecer sempre um sistema mais completo e eficiente."
+  }
+}
