@@ -559,9 +559,11 @@ Essa parte do código faz titulo do transportes e armazem ficarem azul
   margin-top: 25px;
   background: #F0F6F1;
   border-radius: 16px;
-  height: 285px;
+  height: 250px;
   position: relative;
-  overflow: hidden
+  overflow: hidden;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .closing-copy {
@@ -590,7 +592,11 @@ Essa parte do código faz titulo do transportes e armazem ficarem azul
 
 .closing img {
   position: absolute;
-  right: -10px
+  right: -10px;
+  width: 350px;
+  height: 250px;
+  object-fit: contain;
+  object-position: right center;
 }
 
 /* Controles apenas na tela */
@@ -680,4 +686,45 @@ Essa parte do código faz titulo do transportes e armazem ficarem azul
   #app {
     min-width: 816px
   }
+}
+
+.special-page .internal-body{padding-top:38px}
+.special-content{width:100%;}
+.special-kicker{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:24px;font-size:16px;font-weight:700;letter-spacing:1.8px;
+  color:var(--green-dark)
+}
+.special-kicker-number{color:#78948A;font-size:15px;letter-spacing:1px}
+.special-title{
+  margin:0 0 33px;font-size:43px;line-height:1.03;letter-spacing:-.7px;
+  color:#083E3D;font-weight:700;font-family: Roboto, Arial, sans-serif
+}
+.special-hero{
+  display:grid;grid-template-columns:minmax(0,1.40fr) minmax(0,.80fr);
+  gap:20px;align-items:center;min-height:305px
+}
+.special-hero.reverse{grid-template-columns:minmax(0,.80fr) minmax(0,1.40fr)}
+.special-hero.reverse .special-media{order:2}
+.special-hero.reverse .special-message{order:1}
+.special-media{
+  height:280px;width:100%;display:flex;align-items:center;
+  justify-content:center;overflow:hidden;border-radius:13px;
+  background:#F1F6F3;border:1px solid #DBEAE2
+}
+.special-image{width:100%;height:100%;object-fit:contain}
+.special-media-empty{border:2px dashed #C4DACD;background:#F7FAF8}
+.special-placeholder{padding:12px;text-align:center;font-size:17px;color:#688576;line-height:1.4}
+.special-message{min-width:0}
+.special-systems{
+  font-size:15px;font-weight:700;color:var(--green-dark);
+  text-transform:uppercase;line-height:1.4;letter-spacing:.4px;margin-bottom:20px
+}
+.special-impact{
+  font-size:37px;font-family: Roboto, Arial, sans-serif;
+  line-height:1.06;letter-spacing:-.65px;color:#084638;margin:0;font-weight:700
+}
+.special-description{
+  margin:34px 0 0;padding-top:27px;border-top:3px solid #DCEDE4;
+  font-size:24px;font-family: Roboto, Arial, sans-serif;line-height:1.4;color:#244E46
 }

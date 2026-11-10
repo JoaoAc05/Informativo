@@ -1,0 +1,62 @@
+{
+  "data": "AAAA-MM",
+  "capa": {
+		"titulo": "Boletim de Novidades",
+		"descricao": "Melhorias e novas funcionalidades para um sistema cada vez mais completo, seguro e eficiente para o seu dia a dia.",
+		"destaques": [
+			{
+				"icone": "capa/capa_config",
+				"texto": "Mais eficiência nos processos"
+			},
+			{
+				"icone": "capa/capa_grafico",
+				"texto": "Mais controle para o seu negócio"
+			},
+			{
+				"icone": "capa/capa_pessoas",
+				"texto": "Sempre em evolução com você"
+			}
+		]
+	},
+  "principaisNovidades": [
+    {
+      "icone": "principal_qr.png",
+      "novidade": "Título curto da novidade",
+      "sistemaPlataforma": "Sistema / Plataforma"
+    }
+  ],
+  "sistemas": {
+    "RuralFinance": {
+      "titulo": "FINANÇAS",
+      "subtitulo": "Descrição do sistema",
+      "icone": "icones/financas_section.png",
+      "cor": "verde",
+      "solicitacoes": [
+        {
+          "icone": "financas_doc.png",
+          "tela": "Nome da tela",
+          "novidade": "O que foi alterado",
+          "descricao": "Descrição detalhada da implementação"
+        }
+      ]
+    },
+    "RuralTransportes": {
+      "titulo": "TRANSPORTES",
+      "subtitulo": "Descrição do sistema",
+      "icone": "icones/transportes_section.png",
+      "cor": "azul",
+      "solicitacoes": []
+    },
+    "SiloVirtual": {
+      "titulo": "ARMAZÉM",
+      "subtitulo": "Descrição do sistema",
+      "icone": "icones/armazem_section.png",
+      "cor": "azul",
+      "solicitacoes": []
+    }
+  },
+  "rodape": {
+    "titulo": "Juntos cultivamos o futuro!",
+    "descricao": "Texto final do informativo."
+  }
+}

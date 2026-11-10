@@ -1,0 +1,400 @@
+{
+	"data": "2026-09",
+	"capa": {
+		"titulo": "Boletim de Novidades",
+		"descricao": "Melhorias e novas funcionalidades para um sistema cada vez mais completo, seguro e eficiente para o seu dia a dia.",
+		"destaques": [
+			{
+				"icone": "capa/capa_config",
+				"texto": "Mais eficiência nos processos"
+			},
+			{
+				"icone": "capa/capa_grafico",
+				"texto": "Mais controle para o seu negócio"
+			},
+			{
+				"icone": "capa/capa_pessoas",
+				"texto": "Sempre em evolução com você"
+			}
+		]
+	},
+	"principaisNovidades": [
+		{
+			"icone": "icon_qrcode",
+			"novidade": "Melhoria na geração do QR Code do Pix, com mensagem orientativa para tentar novamente em caso de erro.",
+			"sistemaPlataforma": "RuralFinance"
+		},
+		{
+			"icone": "icon_doc",
+			"novidade": "Inclusão da informação do CIOT na impressão do MDF-e após sua emissão pelo CTe.",
+			"sistemaPlataforma": "RuralTransportes"
+		},
+		{
+			"icone": "icon_people",
+			"novidade": "Inclusão da UF do PA na busca do Sintegra para cadastro de entidade produtor rural.",
+			"sistemaPlataforma": "SiloVirtual"
+		},
+		{
+			"icone": "icon_phone",
+			"novidade": "Novo painel para o acompanhamento de relatórios pelo seu celular.",
+			"sistemaPlataforma": "Painel RuralFinance"
+		},
+		{
+			"icone": "icon_phone",
+			"novidade": "Novo painel para o acompanhamento de relatórios pelo seu celular.",
+			"sistemaPlataforma": "Painel SiloVirtual"
+		}
+	],
+	"sistemas": {
+		"RuralFinance": {
+			"titulo": "RuralFinance",
+			"subtitulo": "Mais controle e agilidade na gestão financeira.",
+			"icone": "icones/icon_coin",
+			"cor": "verde",
+			"solicitacoes": [
+				{
+					"icone": "icon_qrcode",
+					"tela": "Recebimentos (Pix)",
+					"novidade": "Mensagem de erro na geração do QR Code",
+					"descricao": "Ao tentar gerar o QR Code do Pix, quando ocorrer erro na comunicação com o banco, o sistema agora exibirá uma mensagem orientando o usuário a tentar novamente."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Relatório de Nota Fiscal Agrupado por Contrato/Peso Retorno",
+					"novidade": "Exibição de notas fiscais sem peso de retorno lançado",
+					"descricao": "O relatório passará a apresentar as notas fiscais que ainda não possuem peso de retorno lançado."
+				},
+				{
+					"icone": "icon_config",
+					"tela": "Lançamento em Conta Corrente",
+					"novidade": "Bloqueio para anos inferiores a 2000",
+					"descricao": "Ao realizar lançamentos em conta corrente com ano retroativo inferior a 2000, o sistema deverá bloquear a operação, evitando lançamentos decorrentes de informações digitadas incorretamente, como 0204."
+				},
+				{
+					"icone": "icon_tool",
+					"tela": "Relatório de Manutenção",
+					"novidade": "Novo modelo de relatório de manutenção",
+					"descricao": "Novo modelo de relatório relacionando valores de manutenção e produtos, contas a pagar e receitas de frete. O relatório também contará com agrupamento e filtros por produto das notas, permitindo a seleção de múltiplos produtos por subgrupo."
+				},
+				{
+					"icone": "icon_tool",
+					"tela": "Ordem de Serviço",
+					"novidade": "Inclusão da placa do veículo",
+					"descricao": "Inclusão de um campo para informar a placa na tela de OS, permitindo posteriormente utilizar a placa como filtro nos relatórios."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Controle de Arrendamentos",
+					"novidade": "Nova tela para controle de arrendamentos",
+					"descricao": "Criação de uma tela para controle de contratos de arrendamento, contemplando datas, formas de pagamento, percentuais, pagamentos ao arrendatário em valor ou em sacas por valor definido, descontos de impostos do produtor e indicação sobre a emissão de nota fiscal."
+				},
+				{
+					"icone": "icon_config",
+					"tela": "Tarefas do Sistema",
+					"novidade": "Vencimento de periodicidades",
+					"descricao": "Inclusão do vencimento das periodicidades nas tarefas do sistema."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "CTe",
+					"novidade": "Impressão da recusa de CTe",
+					"descricao": "Criação da opção de impressão da recusa de CTe, seguindo o modelo utilizado para a inutilização de nota fiscal."
+				},
+				{
+					"icone": "icon_tool",
+					"tela": "Classificação",
+					"novidade": "Remoção do campo de ardidos",
+					"descricao": "Remoção do campo referente a ardidos na classificação."
+				},
+				{
+					"icone": "icon_cash",
+					"tela": "Contrato de Compra e Venda",
+					"novidade": "Suporte a quantidades em toneladas",
+					"descricao": "Ajuste dos campos de quantidade do contrato e dos grids inferiores para permitir o trabalho com valores em toneladas."
+				},
+				{
+					"icone": "icon_printer",
+					"tela": "Relatório Detalhado do Bloco H",
+					"novidade": "Novos recursos de impressão e ordenação",
+					"descricao": "O relatório detalhado do Bloco H passará a permitir impressão, ordenação por coluna e inclusão da coluna com o número do CTR."
+				},
+				{
+					"icone": "icon_warehouse",
+					"tela": "Bloco H",
+					"novidade": "Nova condição de estoque para nota de venda futura",
+					"descricao": "Inclusão de uma nova condição de estoque do Bloco H específica para notas de venda futura."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Contratos e Recusas",
+					"novidade": "Identificação visual de notas pendentes",
+					"descricao": "As notas já recusadas que estiverem pendentes de lançamento da próxima etapa passarão a ser identificadas com uma cor diferenciada nos grids de contratos e recusas."
+				},
+				{
+					"icone": "icon_warehouse",
+					"tela": "Extrato do Armazém",
+					"novidade": "Relatório agrupado por contrato",
+					"descricao": "Criação de relatório do extrato do armazém agrupado por contrato, com separação entre operações de compra e venda."
+				},
+				{
+					"icone": "icon_handshake",
+					"tela": "Contratos de Compra e Venda",
+					"novidade": "Operações de nota triangular",
+					"descricao": "Implementação de operações de nota triangular para contratos de compra e venda, conforme fluxograma encaminhado pelo cliente."
+				},
+				{
+					"icone": "icon_printer",
+					"tela": "Evento de Desconhecimento da Operação de NFe",
+					"novidade": "Impressão e envio automático por e-mail",
+					"descricao": "Ao emitir um evento de desconhecimento da operação de NFe, o sistema passará a permitir a impressão e o envio automático do documento por e-mail ao destinatário."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Nota Fiscal",
+					"novidade": "Validação do endereço do local de retirada",
+					"descricao": "O sistema deverá verificar o preenchimento do endereço do local de retirada da nota fiscal e apresentar um aviso quando a informação não estiver preenchida."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Contrato de Compra e Venda",
+					"novidade": "Vinculação automática do CTR original ao pedido XML",
+					"descricao": "Ao informar o número do CTR original no contrato de compra e venda, o sistema deverá acessar automaticamente a aba de pedido XML da nota e utilizar a informação na tag xPed do XML da NFe."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Arquivo ZIP",
+					"novidade": "Inclusão da carta de correção das notas fiscais",
+					"descricao": "A geração do arquivo ZIP deverá incluir também as cartas de correção vinculadas às notas fiscais."
+				},
+				{
+					"icone": "icon_cash",
+					"tela": "Geração de Valor do CTR",
+					"novidade": "Seleção da forma de pagamento",
+					"descricao": "Inclusão da opção para selecionar a forma de pagamento cadastrada na tela de geração de valor do CTR e utilizar essa informação na impressão do relatório de previsão de pagamentos."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Importação de Pesos de Retorno",
+					"novidade": "Ajuste das colunas do arquivo CSV",
+					"descricao": "Na importação dos pesos de retorno por arquivo CSV, serão removidas as colunas de ticket e data e incluída a coluna referente ao CTR original."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Duplicação de Nota",
+					"novidade": "Herança das informações complementares",
+					"descricao": "Ao duplicar uma nota, o sistema passará a manter também as informações complementares dos produtos."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Importação de NFe",
+					"novidade": "Armazenamento da placa do veículo",
+					"descricao": "Ao importar uma NFe, o sistema deverá salvar a informação da placa e disponibilizá-la na aba fiscal do contrato e nos relatórios."
+				},
+				{
+					"icone": "icon_config",
+					"tela": "Importação de Notas",
+					"novidade": "Aviso para importação sem vínculo de contrato",
+					"descricao": "Quando o CFOP estiver configurado para gerar financeiro automaticamente, o sistema deverá apresentar uma mensagem de confirmação caso o usuário tente importar uma nota sem vínculo com contrato."
+				},
+				{
+					"icone": "icon_tool",
+					"tela": "Contrato de Compra e Venda",
+					"novidade": "Grids fiscais arrastáveis",
+					"descricao": "Os grids das abas fiscais dos contratos de compra e venda passarão a permitir movimentação das colunas, seguindo o mesmo comportamento do grid geral."
+				},
+				{
+					"icone": "icon_cash",
+					"tela": "Importação de CTEs",
+					"novidade": "Correção do totalizador de seleção",
+					"descricao": "Ajuste no totalizador da tela de importação de CTEs para desconsiderar documentos já importados e atualizar corretamente o valor quando a opção de selecionar todos os registros pelo filtro for utilizada."
+				},
+				{
+					"icone": "icon_cash",
+					"tela": "Boletos Online",
+					"novidade": "Redução do intervalo de busca de boletos baixados",
+					"descricao": "Redução do intervalo de busca de boletos baixados pelo Boleto Online de dois dias para um dia, contemplando situações em que o boleto foi pago antecipadamente e a baixa ainda não foi recebida pela API."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Carta de Correção",
+					"novidade": "Envio automático por e-mail",
+					"descricao": "Após a emissão da carta de correção, o sistema deverá realizar o envio automático do documento por e-mail."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Emissão de NFe",
+					"novidade": "Cópia do XML antes da emissão",
+					"descricao": "Criação de uma opção para copiar e preservar o XML antes da emissão da nota fiscal."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Importação de NFs",
+					"novidade": "Validação da Inscrição Estadual",
+					"descricao": "Criação de uma checagem da Inscrição Estadual durante a importação de notas, impedindo a importação de documentos com cadastro classificado como isento."
+				},
+				{
+					"icone": "icon_people",
+					"tela": "Vendedores",
+					"novidade": "Restrição de visualização de OS",
+					"descricao": "Avaliação de mecanismo para impedir que um vendedor visualize as ordens de serviço pertencentes a outros vendedores."
+				},
+				{
+					"icone": "icon_people",
+					"tela": "Relatório de Clientes Inativos",
+					"novidade": "Identificação de clientes inadimplentes e em débito",
+					"descricao": "Criação de relatório de clientes inativos considerando também clientes inadimplentes e com débitos em aberto."
+				},
+				{
+					"icone": "icon_people",
+					"tela": "Relatório de Clientes por Vendedor",
+					"novidade": "Consulta de clientes vinculados aos vendedores",
+					"descricao": "Criação de relatório para consultar os clientes vinculados a cada vendedor, facilitando a transferência da carteira de clientes quando houver mudança de responsável."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "Termo de Transferência de Volume",
+					"novidade": "Novo documento de transferência de volume",
+					"descricao": "Criação de um termo para transferência de volume, conforme modelo que será encaminhado pelo cliente."
+				},
+				{
+					"icone": "icon_config",
+					"tela": "Lote",
+					"novidade": "Coordenadas da propriedade",
+					"descricao": "Criação de uma forma de informar as coordenadas geográficas da propriedade diretamente no lote."
+				},
+				{
+					"icone": "icon_cash",
+					"tela": "Caixa de Royalties",
+					"novidade": "Automatização de lançamentos de royalties",
+					"descricao": "Na compra, será possível selecionar o tipo de GMO e, conforme a configuração, gerar automaticamente um crédito no caixa, mantendo a possibilidade de alteração manual. Na venda, será incluída a seleção correspondente na programação da pré-nota da logística."
+				},
+				{
+					"icone": "icon_config",
+					"tela": "Séries Fiscais",
+					"novidade": "Separação das séries de MDF-e e NFe",
+					"descricao": "Criação de configuração independente para as séries fiscais dos MDF-es e das NFs, permitindo, por exemplo, utilizar a série 921 para MDF-es e manter a série 920 para NFes."
+				},
+				{
+					"icone": "icon_config",
+					"tela": "Parâmetro de Obrigatoriedade de Plano",
+					"novidade": "Bloqueio de lançamentos com saldo de plano em aberto",
+					"descricao": "Quando o parâmetro de obrigatoriedade de plano estiver ativo, o sistema não permitirá novos lançamentos enquanto houver saldo de plano em aberto."
+				}
+			]
+		},
+		"RuralTransportes": {
+			"titulo": "RuralTransportes",
+			"subtitulo": "Mais integração e informações para sua operação.",
+			"icone": "icones/icon_caminhao",
+			"cor": "azul",
+			"solicitacoes": [
+				{
+					"icone": "icon_doc",
+					"tela": "MDF-e",
+					"novidade": "Informação do CIOT",
+					"descricao": "Ao emitir o CIOT pelo CTe, a informação passará a ser exibida na impressão do MDF-e."
+				},
+				{
+					"icone": "icon_phone",
+					"tela": "Envio de E-mail",
+					"novidade": "Envio de e-mail sem configuração por usuário",
+					"descricao": "Inclusão da opção de envio de e-mail seguindo o mesmo comportamento disponível no módulo Financeiro, sem necessidade de configuração individual por usuário."
+				},
+				{
+					"icone": "icon_doc",
+					"tela": "CTes",
+					"novidade": "Relatório de cartas de correção",
+					"descricao": "Criação de um relatório para consultar CTEs que possuem carta de correção e identificar as informações que foram alteradas."
+				},
+				{
+					"icone": "icon_config",
+					"tela": "CIOT",
+					"novidade": "Coordenadas opcionais de coleta e entrega",
+					"descricao": "Inclusão de campos para informar latitude e longitude nas abas de coleta e entrega do CIOT, sem tornar essas informações obrigatórias, permitindo utilizar somente o CEP quando a operação ocorrer dentro da cidade."
+				},
+				{
+					"icone": "icon_caminhao",
+					"tela": "Cadastro de Cavalos e Reboques",
+					"novidade": "Quantidade de eixos",
+					"descricao": "Inclusão da quantidade de eixos no cadastro de cavalos e reboques."
+				},
+				{
+					"icone": "icon_cash",
+					"tela": "MDF-e",
+					"novidade": "Vale-Pedágio Único",
+					"descricao": "Criação da opção de gerar o Vale-Pedágio Único pelo MDF-e, agrupando as informações dos CTEs vinculados."
+				}
+			]
+		},
+		"SiloVirtual": {
+			"titulo": "SiloVirtual",
+			"subtitulo": "Melhorias na gestão de armazenagem e cadastros.",
+			"icone": "icones/SiloVirtual",
+			"cor": "azul",
+			"solicitacoes": [
+				{
+					"icone": "icon_people",
+					"tela": "Cadastro de Entidade (Produtor Rural)",
+					"novidade": "Busca Sintegra",
+					"descricao": "Inclusão da UF do PA na busca do Sintegra de cadastro de entidade produtor rural."
+				},
+				{
+					"icone": "icon_tool",
+					"tela": "Classificação",
+					"novidade": "Remoção do campo de ardidos",
+					"descricao": "Remoção do campo de ardidos da classificação."
+				},
+				{
+					"icone": "icon_qrcode",
+					"tela": "Pesagens",
+					"novidade": "Confirmação no reenvio de pesagens ao Guardian",
+					"descricao": "Inclusão de mensagem informando o sucesso ou a falha quando o cliente utilizar a funcionalidade de reenviar pesagens ao Guardian."
+				}
+			]
+		},
+		"Paineis": {
+			"titulo": "Paineis",
+			"subtitulo": "Mais informações para acompanhamento da operação.",
+			"icone": "icones/icon_warehouse",
+			"cor": "azul",
+			"solicitacoes": [
+				{
+					"icone": "icon_warehouse",
+					"tela": "Painel do Armazém",
+					"novidade": "Novo relatório de pesagens avulsas",
+					"descricao": "Criação de um novo relatório de pesagens avulsas no painel do armazém."
+				},
+				{
+					"icone": "icon_warehouse",
+					"tela": "Painel do Armazém",
+					"novidade": "Variedades de produtos nos relatórios",
+					"descricao": "Inclusão da informação das variedades dos produtos nos relatórios do painel do armazém."
+				},
+				{
+					"icone": "icon_cash",
+					"tela": "Painel do Armazém",
+					"novidade": "Peso equivalente em sacas",
+					"descricao": "Inclusão do peso equivalente em sacas no painel do armazém."
+				}
+			]
+		},
+		"TodosOsSistemas": {
+			"titulo": "Todos os Sistemas",
+			"subtitulo": "Mais segurança e compatibilidade nos documentos fiscais.",
+			"icone": "icones/icon_config",
+			"cor": "azul",
+			"solicitacoes": [
+				{
+					"icone": "icon_doc",
+					"tela": "Documentos Fiscais",
+					"novidade": "Suporte a CNPJ alfanumérico",
+					"descricao": "Alteração do algoritmo de validação das chaves dos documentos fiscais para comportar CNPJs alfanuméricos, ampliando o suporte para além do cadastro e utilização das entidades jurídicas."
+				}
+			]
+		}
+	},
+	"rodape": {
+		"titulo": "Juntos cultivamos o futuro!",
+		"descricao": "Essas melhorias são resultado de sugestões, necessidades do dia a dia e do nosso compromisso em oferecer sempre um sistema mais completo e eficiente."
+	}
+}

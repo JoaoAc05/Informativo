@@ -139,6 +139,43 @@ function makeCover(data){
   return page;
 }
 
+function validSpecialHighlights(data){
+  return (Array.isArray(data.destaquesEspeciais) ? data.destaquesEspeciais : [])
+    .filter(item => item && typeof item === 'object' &&
+      [item.titulo,item.fraseImpacto,item.descricao,item.imagem].some(value => typeof value === 'string' && value.trim()))
+    .sort((a,b) => (Number(a.ordem)||0) - (Number(b.ordem)||0));
+}
+
+function makeSpecialPage(data, item, index, total){
+  const {page,body}=makePage(data,'special-page');
+  const wrap=el('article','special-content');
+  const kicker=el('div','special-kicker');
+  kicker.appendChild(el('span','special-kicker-name','DESTAQUE ESPECIAL'));
+  kicker.appendChild(el('span','special-kicker-number',`${String(index+1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`));
+  wrap.appendChild(kicker);
+  wrap.appendChild(el('h2','special-title',item.titulo||'Novidade em destaque'));
+  const hero=el('div',`special-hero ${index%2===1?'reverse':''}`);
+  const media=el('div','special-media');
+  if(typeof item.imagem==='string' && item.imagem.trim()){
+    const picture=img(item.imagem,'special-image',item.titulo||'Imagem do destaque');
+    picture.onerror=()=>{picture.remove();media.classList.add('special-media-empty');media.appendChild(el('span','special-placeholder','Imagem do destaque'));};
+    media.appendChild(picture);
+  }else{
+    media.classList.add('special-media-empty');
+    media.appendChild(el('span','special-placeholder','Adicione a imagem deste destaque no JSON'));
+  }
+  const message=el('div','special-message');
+  if(Array.isArray(item.sistemas) && item.sistemas.length){
+    message.appendChild(el('div','special-systems',item.sistemas.join('  •  ')));
+  }
+  message.appendChild(el('h3','special-impact',item.fraseImpacto||item.titulo||''));
+  hero.append(media,message);
+  wrap.appendChild(hero);
+  if(item.descricao) wrap.appendChild(el('p','special-description',item.descricao));
+  body.appendChild(wrap);
+  return page;
+}
+
 function makeMainHeading(){
   const wrap=el('div','main-heading');
   const icon=el('div','icon-box');
@@ -328,6 +365,8 @@ function buildDocument(data){
   app.innerHTML='';
   const pages=[];
   pages.push(makeCover(data));
+  const specials=validSpecialHighlights(data);
+  specials.forEach((item,index)=>pages.push(makeSpecialPage(data,item,index,specials.length)));
   if((data.principaisNovidades||[]).length) pages.push(buildMainPage(data));
   for(const id of SYSTEM_ORDER){
     const sys=data.sistemas?.[id];
@@ -336,18 +375,67 @@ function buildDocument(data){
   }
   // O bloco final tenta ocupar a última página disponível. Se não houver espaço,
   // recebe uma página própria para não repetir artificialmente uma tabela do sistema.
-  const last=pages[pages.length-1];
-  const lastBody=last.querySelector('.internal-body');
-  if(lastBody && last.classList.contains('system-page')){
-    const closing=makeClosing(data);
+  // const last=pages[pages.length-1];
+  // const lastBody=last.querySelector('.internal-body');
+  // if(lastBody && last.classList.contains('system-page')){
+  //   const closing=makeClosing(data);
+  //   lastBody.appendChild(closing);
+  //   if(last.scrollHeight > last.clientHeight){
+  //     lastBody.removeChild(closing);
+  //     const p=makePage(data,'closing-page');
+  //     p.body.appendChild(closing);
+  //     pages.push(p.page);
+  //   }
+  // }
+  
+  const last = pages[pages.length - 1];
+  const lastBody = last?.querySelector('.internal-body');
+
+  if (lastBody && last.classList.contains('system-page')) {
+    const closing = makeClosing(data);
+
+    // A página precisa estar no DOM para permitir a medição.
+    app.appendChild(last);
+
+    // Insere provisoriamente o closing na última página.
     lastBody.appendChild(closing);
-    if(last.scrollHeight > last.clientHeight){
-      lastBody.removeChild(closing);
-      const p=makePage(data,'closing-page');
-      p.body.appendChild(closing);
-      pages.push(p.page);
+
+    // Mede a posição real dos elementos.
+    const pageRect = last.getBoundingClientRect();
+    const closingRect = closing.getBoundingClientRect();
+
+    // Procura o rodapé existente na estrutura da página.
+    // Ajuste os seletores conforme as classes reais do projeto.
+    const footer = last.querySelector(
+      '.footer, .page-footer, .internal-footer, footer'
+    );
+
+    // Margem mínima entre o closing e o rodapé.
+    const margemSeguranca = 12;
+
+    // Se o rodapé não for encontrado, reserva uma faixa
+    // de 75px na parte inferior da folha.
+    const limiteInferior = footer
+      ? footer.getBoundingClientRect().top
+      : pageRect.bottom - 75;
+
+    // Detecta sobreposição ou transbordamento.
+    const semEspaco =
+      closingRect.bottom + margemSeguranca > limiteInferior ||
+      closingRect.bottom > pageRect.bottom;
+
+    if (semEspaco) {
+      // Retira o closing da página de solicitações.
+      closing.remove();
+
+      // Cria outra página apenas quando necessário.
+      const novaPagina = makePage(data, 'closing-page');
+      novaPagina.body.appendChild(closing);
+
+      pages.push(novaPagina.page);
     }
   }
+
   // Remove empty trailing page only if no content.
   const total=pages.length;
   pages.forEach((p,i)=>{
